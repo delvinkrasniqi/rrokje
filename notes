@@ -1,0 +1,24 @@
+ <?php 
+                    if(isset($file)){
+                        ?>
+                <h1>File : <span><?php if(isset($file)){ echo $_FILES['file']['name'];} ?></span></h1>
+                <?php
+                    }
+                    else{
+                        ?>
+                <h1>Fjala: <span><?php if(isset($text)){ echo substr($text,0,50) . "..."; } ?></span></h1>
+                <?php
+                    }
+                ?>
+                <h2>Numri total i zanoreve: <span><?php if(isset($zanoreCount)){ echo $zanoreCount; } ?></span></h2>
+                <h2>Numri total i bashktinglloreve:
+                    <span><?php if(isset($bashktinglloreCount)){ echo $bashktinglloreCount; } ?></span></h2>
+                <h2>Shkronja identike te njepasnjeshme: <span><?php if(isset($identic)){ echo $identic; } ?></span></h2>
+                <h2>Numri i rrokjeve:
+                    <span><?php if(isset($zanoreCount) && (isset($identic))){ echo $zanoreCount-$identic; } ?></span>
+                </h2>
+
+
+
+
+               
